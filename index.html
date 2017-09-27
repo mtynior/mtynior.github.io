@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Michal Tynior</title>
+
+    <meta name="description" content="Michal Tynior is Software Engineer specializing in iOS Development.">
+    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mtynior" />
+    <meta name="twitter:title" content="Michal Tynior">
+    <meta name="twitter:description" content="Michal Tynior is Software Engineer specializing in iOS Development.">
+    <meta name="twitter:image" content="./images/logo_512x256.png">
+
+    <meta property="og:url" content="https//tynior.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Michal Tynior" />
+    <meta property="og:description" content="Michal Tynior is Software Engineer specializing in iOS Development." />
+    <meta property="og:image" content="./images/logo_1200x630.png" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <h1>
+                <span id="greetings"></span>
+            </h1>
+            <noscript>
+                <h1>/* Hello there.<br />My name is Michal and I am Software Engineer. */</h1>
+            </noscript>
+        </section>
+        <section class="social">
+            <section class="one-fourth">
+                <a href="" id="contact_link" rel="nofollow">
+                    <i class="fa fa-envelope"></i>
+                    <h3>Contact</h3>
+                    <noscript><h3>Please enable Java Script.</h3></noscript>
+                </a>
+            </section>
+            <section class="one-fourth">
+                <a href="https://twitter.com/mtynior" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                    <h3>Twitter</h3>
+                </a>
+            </section>
+            <section class="one-fourth">
+                <a href="https://github.com/mtynior" target="_blank">
+                    <i class="fa fa-github"></i>
+                    <h3>GitHub</h3>
+                </a>
+            </section>
+            <section class="one-fourth">
+                <a href="https://linkedin.com/in/mtynior/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                </a>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <span>// Copyright &copy; 2017, Michal Tynior.</span>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+    <script>
+        $(".social").hide();
+
+        $('#greetings').typeIt({
+                speed: 50,
+                autoStart: false,
+                callback: function() {
+                    $(".social").fadeIn(2000);
+                }
+            })
+            .tiType('/* Hello there.').tiPause(500).tiBreak().tiPause(750)
+            .tiType('My name is Michal and I am Software Engineer. */').tiPause(250).tiBreak();
+    </script>
+    <script type="text/javascript">
+        function createMailtoLinks() {
+            $('#contact_link').each(function() {
+                var i = $(this);
+                i.attr('href', 'mai' + 'lto:' + 'contact' + '@' + 'tynior' + '.com' + '?subject=Hello there&body=Hello Michal, so I was looking at your website and...');
+            });
+        }
+        $(function() {
+            createMailtoLinks();
+        });
+    </script>
+</body>
+
+</html>

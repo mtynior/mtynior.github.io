@@ -22,24 +22,37 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10rem 3rem;
+    padding: 8rem 3rem;
 }
 
 .hero {
     color: #45bb3e;
-    font-size: 1.9rem;
+    font-size: 1.75rem;
 }
 
-.one-fourth {
-    width: 16%;
-    float: left;
-    text-align: center;
+.hero a {
+    color: #45bb3e;
+}
+
+.hero a:hover * {
+    color: gray;
+}
+
+
+.social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    justify-content: center;
+}
+
+.social div {
     text-align: center;
 }
 
 .social i {
     font-size: 5rem;
-    margin: 0 0 1rem 0;
+    margin-bottom: 1rem;
 }
 
 .social a {
@@ -66,8 +79,8 @@ footer {
 
 .blinking-cursor {
     margin: 1rem 0;
-    color: #fff;
-    width: 3px;
+    color: #45bb3e;
+    width: 5px;
     height: 3rem;
     background-color: #fff;
     display: inline-block;
@@ -84,31 +97,46 @@ footer {
         background-color: transparent;
     }
     50% {
-        background-color: #fff;
+        background-color: #45bb3e;
     }
 }
 
 
 /* Media queries */
 
-@media screen and (max-width: 768px) {
-    .one-fourth {
-        float: left;
-        width: 50%;
-        margin: 1rem 0;
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 5rem 3rem;
+    }
+}
+@media screen and (max-width: 960px) {
+    .social {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 600px) {
+    main {
+        padding: 3rem 3rem;
+    }
+
+    .hero{
+        font-size: 1.5rem;
+    }
+
     .social {
-        margin-top: 5rem;
+        margin-top: 4rem;
+        grid-template-columns: 1fr 1fr;
     }
-    .one-fourth {
-        float: left;
-        width: 100%;
-        margin: 1rem 0rem;
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        padding: 2rem 3rem;
     }
-    footer {
-        margin: 3rem 0;
+
+    .social {
+        margin-top: 2rem;
+        grid-template-columns: 1fr;
     }
 }

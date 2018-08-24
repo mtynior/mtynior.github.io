@@ -6,22 +6,22 @@
     <title>Michal Tynior</title>
 
     <meta name="description" content="Michal Tynior is Software Engineer specializing in iOS Development.">
-    <link rel="icon" type="image/png" href="http://tynior.com/images/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="http://tynior.com/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="http://tynior.com/images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://tynior.com/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://tynior.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://tynior.com/images/favicon-96x96.png" sizes="96x96">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@mtynior" />
     <meta name="twitter:title" content="Michal Tynior">
     <meta name="twitter:description" content="Michal Tynior is Software Engineer specializing in iOS Development.">
-    <meta name="twitter:image" content="http://tynior.com/images/logo_876x460.png">
+    <meta name="twitter:image" content="https://tynior.com/images/logo_876x460.png">
 
     <meta property="fb:app_id" content="886139744875504" />
-    <meta property="og:url" content="http://tynior.com" />
+    <meta property="og:url" content="https://tynior.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Michal Tynior" />
-    <meta property="og:description" content="Michal Tynior is Software Engineer specializing in iOS Development." />
-    <meta property="og:image" content="http://tynior.com/images/logo_1200x630.png" />
+    <meta property="og:description" content="Michal Tynior is Software Engineer and consultant specializing in iOS Development." />
+    <meta property="og:image" content="https://tynior.com/images/logo_1200x630.png" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
@@ -30,82 +30,56 @@
 <body>
     <main>
         <section class="hero">
-            <h1>
-                <span id="greetings"></span>
-            </h1>
-            <noscript>
-                <h1>/* Hello there.<br />My name is Michal and I am Software Engineer. */</h1>
-            </noscript>
+            <h1>/*<br />Hello there.<br />My name is Michal Tynior and I am software engineer, iOS developer, consultant and trouble maker in general. Apart from <a href="https://github.com/mtynior">coding</a>, I also write at <a href="https://brainarchives.com">Brain Archives</a>.<br />*/</h1>
+            <span class="blinking-cursor"></span>
         </section>
         <section class="social">
-            <section class="one-fourth">
+            <div>
                 <a href="" id="contact_link" rel="nofollow">
                     <i class="fa fa-envelope"></i>
                     <h3>Contact</h3>
                     <noscript><h3>Please enable Java Script.</h3></noscript>
                 </a>
-            </section>
-            <section class="one-fourth">
+            </div>
+            <div>
                 <a href="https://brainarchives.com/" target="_blank">
                     <i class="fas fa-brain"></i>
                     <h3>Brain Archives</h3>
                 </a>
-            </section>
-            <section class="one-fourth">
+            </div>
+            <div>
                 <a href="https://twitter.com/mtynior" target="_blank">
                     <i class="fab fa-twitter"></i>
                     <h3>Twitter</h3>
                 </a>
-            </section>
-            <section class="one-fourth">
+            </div>
+            <div>
                 <a href="https://mastodon.social/@mtynior" target="_blank">
                     <i class="fab fa-mastodon"></i>
                     <h3>Mastodon</h3>
                 </a>
-            </section>
-            <section class="one-fourth">
+            </div>
+            <div>
                 <a href="https://github.com/mtynior" target="_blank">
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
                 </a>
-            </section>
-            <section class="one-fourth">
+            </div>
+            <div>
                 <a href="https://linkedin.com/in/mtynior/" target="_blank">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
                 </a>
-            </section>
+            </div>
         </section>
     </main>
     <footer>
         <span>// Copyright &copy; 2018, Michal Tynior.</span>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
-    <script>
-        $(".social").hide();
-
-        $('#greetings').typeIt({
-                speed: 50,
-                autoStart: false,
-                callback: function() {
-                    $(".social").fadeIn(2000);
-                }
-            })
-            .tiType('/* Hello there.').tiPause(500).tiBreak().tiPause(750)
-            .tiType('My name is Michal and I am Software Engineer. */').tiPause(250).tiBreak();
-    </script>
     <script type="text/javascript">
-        function createMailtoLinks() {
-            $('#contact_link').each(function() {
-                var i = $(this);
-                i.attr('href', 'mai' + 'lto:' + 'contact' + '@' + 'tynior' + '.com' + '?subject=Hello there&body=Hello Michal, so I was looking at your website and...');
-            });
-        }
-        $(function() {
-            createMailtoLinks();
-        });
+        let contactItem = document.getElementById("contact_link");
+        contactItem.setAttribute('href', 'mai' + 'lto:' + 'contact' + '@' + 'tynior' + '.com' + '?subject=Hello there&body=Hello Michal, so I was looking at your website and...');
     </script>
 </body>
 

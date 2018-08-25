@@ -8,6 +8,7 @@
 html {
     height: 100vh;
     width: 100vw;
+    height: 100%;
 }
 
 body {
@@ -21,13 +22,12 @@ main {
     min-height: 95vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 8rem 3rem;
 }
 
 .hero {
     color: #45bb3e;
     font-size: 1.75rem;
+    padding: 5rem 3rem 2rem /* top (left,right) bottom*/
 }
 
 .hero a {
@@ -38,33 +38,41 @@ main {
     color: gray;
 }
 
-
 .social {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
     justify-content: center;
+    flex: 1;
+    margin-bottom: 3rem;
 }
 
-.social div {
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-row-gap: 2rem;
+    resize: horizontal;
+}
+
+.links div {
     text-align: center;
 }
 
-.social i {
+.links i {
     font-size: 5rem;
     margin-bottom: 1rem;
 }
 
-.social a {
+.links a {
     text-decoration: none;
     color: #fff;
 }
 
-.social a:hover * {
+.links a:hover * {
     color: gray;
 }
 
-.social a:visited {
+.links a:visited {
     color: #fff;
 }
 
@@ -73,7 +81,6 @@ footer {
     height: 5vh;
     padding: 0 2rem;
 }
-
 
 /* Blinking cusror */
 
@@ -98,45 +105,5 @@ footer {
     }
     50% {
         background-color: #45bb3e;
-    }
-}
-
-
-/* Media queries */
-
-@media screen and (max-width: 1200px) {
-    main {
-        padding: 5rem 3rem;
-    }
-}
-@media screen and (max-width: 960px) {
-    .social {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    main {
-        padding: 3rem 3rem;
-    }
-
-    .hero{
-        font-size: 1.5rem;
-    }
-
-    .social {
-        margin-top: 4rem;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    main {
-        padding: 2rem 3rem;
-    }
-
-    .social {
-        margin-top: 2rem;
-        grid-template-columns: 1fr;
     }
 }

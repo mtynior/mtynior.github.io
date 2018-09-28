@@ -63,17 +63,15 @@ main {
     margin-bottom: 1rem;
 }
 
-.links a {
+.links a,
+.links a:active,
+.links a:visited {
     text-decoration: none;
     color: #fff;
 }
 
 .links a:hover * {
     color: gray;
-}
-
-.links a:visited {
-    color: #fff;
 }
 
 footer {

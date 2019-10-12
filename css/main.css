@@ -26,9 +26,9 @@ main {
 
 .hero {
     color: #45bb3e;
-    font-size: 1.75rem;
-    padding: 5rem 3rem 2rem /* top (left,right) bottom*/
-}
+    font-size: 2.75rem;
+    padding: 5rem 3rem 2rem; /* top (left,right) bottom */
+}    
 
 .hero a {
     color: #45bb3e;
@@ -103,5 +103,53 @@ footer {
     }
     50% {
         background-color: #45bb3e;
+    }
+}
+
+/* Media quries */
+
+@media (max-width: 1200px) { 
+    .hero {
+        font-size: 2.75rem;
+    }    
+}
+
+@media (max-width: 992px) { 
+    .hero {
+        font-size: 2.5rem;
+    }    
+}
+
+@media (max-width: 768px) { 
+    .hero {
+        font-size: 2rem;
+        padding: 2.75rem 2rem 2.75rem; /* top (left,right) bottom */
+    }    
+
+    .blinking-cursor {
+        height: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) { 
+    .hero {
+        font-size: 1.85rem;
+        padding: 1.5rem 1.75rem 1.5rem; /* top (left,right) bottom */
+    }    
+
+    .blinking-cursor {
+        height: 2.5rem;
+    }
+}
+
+@media (max-width: 360px) { 
+    .hero {
+        font-size: 1.55rem;
+        padding: 2.25rem 1rem 2.25rem; /* top (left,right) bottom */
+    }    
+
+    .blinking-cursor {
+        height: 2.0rem;
+        width: 4px;
     }
 }

@@ -65,7 +65,7 @@ main {
 
 .hero {
   width: 100%;
-  margin-top: 10rem;
+  margin-top: 8rem;
   padding: 2rem 5rem;
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ main {
 }
 
 .hero h1 {
-  padding: 1rem 0;
+  padding: 5rem 0;
   font-size: 5em;
 }
 
@@ -131,10 +131,12 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .hero {
-    padding: 2rem 1rem;
-    align-items: center;
-    font-size: 12px;
-    text-align: center;
+    margin-top: 0rem;
+    padding: 2rem 2rem;
+  }
+
+  .hero h1 {
+    padding: 3rem 0;
   }
 
   .social {
@@ -150,6 +152,15 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .hero {
+    margin-top: 8rem;
+    padding: 2rem 5rem;
+  }
+
+  .hero h1 {
+    padding: 5rem 0;
+  }
+
   .social {
     margin-top: 5rem;
   }

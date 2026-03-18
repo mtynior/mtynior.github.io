@@ -1,6 +1,8 @@
 :root {
-  --color-background: #282A37;
-  --color-text: #54BB56;
+  --color-background: #303446;
+  --color-text: #f3bea2;
+  --color-text-alternative: #c994e9;
+  --color-cursor: #c8b2d6;
 }
 
 * {
@@ -56,11 +58,24 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  background-image: linear-gradient(0deg, var(--color-text), var(--color-text-alternative));
+  background-clip: text;
+  color: transparent;
 }
 
 .hero h1 {
   padding: 1rem 0;
   font-size: 5rem;
+}
+
+.greeting::after {
+  content: "";
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50%;
+  border-right: 0.75rem solid var(--color-cursor);
+  animation: blink .5s step-end infinite alternate;
 }
 
 .hero p {
@@ -69,7 +84,7 @@ main {
 }
 
 .hero a {
-  color: var(--color-text);
+  color: transparent;
   text-decoration: underline;
 }
 
@@ -247,4 +262,8 @@ footer {
   body {
     font-size: 20px;
   }
+}
+
+@keyframes blink {
+  50% { border-color: transparent;}
 }
